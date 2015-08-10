@@ -1962,6 +1962,24 @@
     }
     ```
 
+## Bacon.js
+
+  - [29.1](#29.1) <a name='29.1'></a> Properties
+
+    - Noun in singular or plural, eg. `const currentSocket` or `const onlineCustomers`
+    - NounIsSomething, eg. `const friendIsOnline`, or simply isSomething if the context is obvious, eg. `const isConnected`
+
+  - [29.2](#29.2) <a name='29.2'></a> Streams
+
+    - A stream's name should include a verb in past tense, eg. `const mouseClicked` or `const customerEmptiedShoppingCart`
+
+  - [29.3](#29.3) <a name='29.3'></a> Buses
+
+    - Buses should be named the same way as streams but with the suffix `Bus`, eg. `const mouseClickedBus`
+    - Buses should not be exposed as is, instead expose a stream a separate function for pushing to the bus separately.
+    - form by calling `.toEventStream()` and expose a separate function for pushing to the bus, eg `export function customerEmptyShoppingCart
+() { customerEmptiedShoppingCartBus.push() }`
+
 **[⬆ back to top](#table-of-contents)**
 
 
