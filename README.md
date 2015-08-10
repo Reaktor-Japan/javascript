@@ -1976,9 +1976,7 @@
   - [29.3](#29.3) <a name='29.3'></a> Buses
 
     - Buses should be named the same way as streams but with the suffix `Bus`, eg. `const mouseClickedBus`
-    - Buses should not be exposed as is, instead expose a stream a separate function for pushing to the bus separately.
-    - form by calling `.toEventStream()` and expose a separate function for pushing to the bus, eg `export function customerEmptyShoppingCart
-() { customerEmptiedShoppingCartBus.push() }`
+    - Buses should not be exposed as is, instead expose the bus's stream and a separate function for pushing to the bus separately.
 
 **[⬆ back to top](#table-of-contents)**
 
